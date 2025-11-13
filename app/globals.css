@@ -24,3 +24,33 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Styles for @thatopen/ui components */
+.options-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+}
+
+.phone-menu-toggler {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 6;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .phone-menu-toggler {
+    display: block;
+  }
+
+  .options-menu {
+    display: none;
+  }
+
+  .options-menu-visible {
+    display: block !important;
+  }
+}
