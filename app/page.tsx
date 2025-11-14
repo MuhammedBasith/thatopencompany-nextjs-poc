@@ -166,6 +166,35 @@ export default function Home() {
                 Launch Properties Viewer
               </Link>
             </div>
+
+            <div className="border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors">
+              <div className="flex items-start justify-between mb-3">
+                <h2 className="text-xl font-semibold text-black dark:text-zinc-50">BIM Dimension Editor</h2>
+                <span className="text-xs px-2 py-1 rounded-full bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300">Modifies Dimensions</span>
+              </div>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3">
+                Edit element dimensions (width, height, depth) with visual feedback. Demonstrates the limitations and possibilities of web-based BIM editing.
+              </p>
+              <details className="mb-3">
+                <summary className="text-xs font-medium text-zinc-500 dark:text-zinc-400 cursor-pointer hover:text-zinc-700 dark:hover:text-zinc-300">
+                  Features & Capabilities
+                </summary>
+                <ul className="mt-2 text-xs text-zinc-500 dark:text-zinc-400 space-y-1 pl-4">
+                  <li>• Edit width, height, and depth dimensions</li>
+                  <li>• Real-time visual feedback via scaling</li>
+                  <li>• Live dimension display in status bar</li>
+                  <li>• Reset to original dimensions</li>
+                  <li>• Demonstrates Fragment geometry limitations</li>
+                  <li>• Educational disclaimer about parametric editing</li>
+                </ul>
+              </details>
+              <Link
+                className="inline-flex h-10 items-center justify-center rounded-full bg-foreground px-6 text-sm text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc]"
+                href="/dimension-editor"
+              >
+                Launch Dimension Editor
+              </Link>
+            </div>
           </div>
 
           <div className="border-t border-zinc-200 dark:border-zinc-800 pt-6 w-full max-w-2xl mb-5">
