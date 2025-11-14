@@ -142,7 +142,8 @@ export default function IFCConverterPage() {
       const worlds = components.get(OBC.Worlds);
       const world = worlds.list.values().next().value;
       if (world) {
-        model.useCamera(world.camera.three);
+        const camera = world.camera.three as THREE.PerspectiveCamera;
+        model.useCamera(camera);
         world.scene.three.add(model.object);
         await fragments.update(true);
 
@@ -174,6 +175,8 @@ export default function IFCConverterPage() {
         world.scene.three.add(dragHelper);
 
         // Setup drag controls on the invisible helper
+        if (!world.renderer) return;
+
         const dragControls = new DragControls(
           [dragHelper],
           world.camera.three,
@@ -189,11 +192,15 @@ export default function IFCConverterPage() {
 
         // Enable/disable camera controls when dragging
         dragControls.addEventListener("dragstart", () => {
-          world.camera.controls.enabled = false;
+          if (world.camera.controls) {
+            world.camera.controls.enabled = false;
+          }
         });
 
         dragControls.addEventListener("dragend", () => {
-          world.camera.controls.enabled = true;
+          if (world.camera.controls) {
+            world.camera.controls.enabled = true;
+          }
         });
 
         // Update model position when dragging the helper
@@ -210,14 +217,16 @@ export default function IFCConverterPage() {
         const maxDim = Math.max(size.x, size.y, size.z);
         const distance = maxDim * 1.5;
 
-        await world.camera.controls.setLookAt(
-          center.x + distance,
-          center.y + distance,
-          center.z + distance,
-          center.x,
-          center.y,
-          center.z
-        );
+        if (world.camera.controls) {
+          await world.camera.controls.setLookAt(
+            center.x + distance,
+            center.y + distance,
+            center.z + distance,
+            center.x,
+            center.y,
+            center.z
+          );
+        }
       }
 
       setLoadedModel(modelId);
