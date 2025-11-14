@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@thatopen/components": "^3.2.6",
+    "@thatopen/components-front": "^3.2.7",
     "@thatopen/fragments": "^3.2.6",
     "@thatopen/ui": "^3.2.0",
+    "@thatopen/ui-obc": "^3.2.2",
     "@types/stats.js": "^0.17.4",
     "@types/three": "^0.181.0",
     "next": "16.0.3",
