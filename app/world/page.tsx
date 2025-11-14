@@ -47,6 +47,17 @@ export default function WorldPage() {
     // Make the background transparent
     world.scene.three.background = null;
 
+    // Add grid helper
+    const gridSize = 100;
+    const gridDivisions = 100;
+    const gridHelper = new THREE.GridHelper(
+      gridSize,
+      gridDivisions,
+      0x888888,
+      0x444444
+    );
+    world.scene.three.add(gridHelper);
+
     // Load fragments model
     const workerUrl = "/resources/worker.mjs";
     const fragments = components.get(OBC.FragmentsManager);
