@@ -110,7 +110,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border-t border-zinc-200 dark:border-zinc-800 pt-6 w-full max-w-2xl">
+          <div className="border-t border-zinc-200 dark:border-zinc-800 pt-6 w-full max-w-2xl mb-5">
             <h3 className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Why Fragments?</h3>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
               Fragments represent the future of BIM visualization, offering 10-100x faster loading times compared to traditional formats.
