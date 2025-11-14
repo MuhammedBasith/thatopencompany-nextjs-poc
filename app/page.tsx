@@ -108,6 +108,64 @@ export default function Home() {
                 Launch Converter
               </Link>
             </div>
+
+            <div className="border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors">
+              <div className="flex items-start justify-between mb-3">
+                <h2 className="text-xl font-semibold text-black dark:text-zinc-50">BIM Height Adjuster</h2>
+                <span className="text-xs px-2 py-1 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300">Modifies Fragments</span>
+              </div>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3">
+                Load IFC models and adjust their height in real-time by manipulating fragment transforms. Test dynamic BIM element modification.
+              </p>
+              <details className="mb-3">
+                <summary className="text-xs font-medium text-zinc-500 dark:text-zinc-400 cursor-pointer hover:text-zinc-700 dark:hover:text-zinc-300">
+                  Features & Capabilities
+                </summary>
+                <ul className="mt-2 text-xs text-zinc-500 dark:text-zinc-400 space-y-1 pl-4">
+                  <li>• Real-time height adjustment with increment/decrement controls</li>
+                  <li>• Modify fragment transforms (Y-coordinate position)</li>
+                  <li>• Visual feedback with current height display</li>
+                  <li>• Reset to original position capability</li>
+                  <li>• Drag-and-drop positioning on grid</li>
+                  <li>• Test dynamic BIM element manipulation</li>
+                </ul>
+              </details>
+              <Link
+                className="inline-flex h-10 items-center justify-center rounded-full bg-foreground px-6 text-sm text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc]"
+                href="/ifc-height-adjuster"
+              >
+                Launch Height Adjuster
+              </Link>
+            </div>
+
+            <div className="border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors">
+              <div className="flex items-start justify-between mb-3">
+                <h2 className="text-xl font-semibold text-black dark:text-zinc-50">Element Properties Viewer</h2>
+                <span className="text-xs px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">Uses Fragments</span>
+              </div>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3">
+                Display and explore BIM element properties with an interactive selection system. Click on elements to view their data.
+              </p>
+              <details className="mb-3">
+                <summary className="text-xs font-medium text-zinc-500 dark:text-zinc-400 cursor-pointer hover:text-zinc-700 dark:hover:text-zinc-300">
+                  Features & Capabilities
+                </summary>
+                <ul className="mt-2 text-xs text-zinc-500 dark:text-zinc-400 space-y-1 pl-4">
+                  <li>• Interactive element selection with highlighter</li>
+                  <li>• Display fragment IDs and express IDs</li>
+                  <li>• Real-time property updates on selection</li>
+                  <li>• Load and visualize BIM fragments</li>
+                  <li>• Clean UI for property inspection</li>
+                  <li>• Mobile-responsive controls</li>
+                </ul>
+              </details>
+              <Link
+                className="inline-flex h-10 items-center justify-center rounded-full bg-foreground px-6 text-sm text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc]"
+                href="/element-properties"
+              >
+                Launch Properties Viewer
+              </Link>
+            </div>
           </div>
 
           <div className="border-t border-zinc-200 dark:border-zinc-800 pt-6 w-full max-w-2xl mb-5">
