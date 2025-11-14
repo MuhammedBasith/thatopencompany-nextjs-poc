@@ -359,6 +359,7 @@ export default function DimensionEditorContent() {
                   value={width}
                   onChange={(e) => setWidth(parseFloat(e.target.value) || 0)}
                   style={{
+                    color: "black",
                     width: "100%",
                     padding: "8px",
                     border: "1px solid #d1d5db",
@@ -387,6 +388,7 @@ export default function DimensionEditorContent() {
                   value={height}
                   onChange={(e) => setHeight(parseFloat(e.target.value) || 0)}
                   style={{
+                    color: "black",
                     width: "100%",
                     padding: "8px",
                     border: "1px solid #d1d5db",
@@ -415,6 +417,7 @@ export default function DimensionEditorContent() {
                   value={depth}
                   onChange={(e) => setDepth(parseFloat(e.target.value) || 0)}
                   style={{
+                    color: "black",
                     width: "100%",
                     padding: "8px",
                     border: "1px solid #d1d5db",
